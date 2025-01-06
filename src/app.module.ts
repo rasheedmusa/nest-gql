@@ -1,9 +1,8 @@
-import { Module } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Module } from '@nestjs/common';;
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { GraphQLModule } from '@nestjs/graphql';
 import { CatsModule } from './cats/cats.module';
-import { upperDirectiveTransformer } from './common/directives/upper-case.directive';
+import { upperDirectiveTransformer } from './common/directives';
 
 @Module({
   imports: [
@@ -15,7 +14,6 @@ import { upperDirectiveTransformer } from './common/directives/upper-case.direct
       playground: true,
     }),
     CatsModule,
-  ],
-  providers: [AppService],
+  ]
 })
 export class AppModule {}
