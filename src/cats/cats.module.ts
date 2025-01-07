@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { CatsResolver } from './cats.resolver';
 
-@Module({})
+@Module({
+  providers: [CatsResolver],
+})
 export class CatsModule {}
